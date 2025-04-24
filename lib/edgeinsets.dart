@@ -27,7 +27,7 @@ class Home extends StatelessWidget {
       body: Row(
         children: <Widget>[
           Container(
-            color: Colors.lightBlue,
+            color: Colors.tealAccent,
             margin: const EdgeInsets.all(10.0),
             padding: const EdgeInsets.all(3.0),
             child: ElevatedButton(
@@ -50,7 +50,7 @@ class Home extends StatelessWidget {
             ),
           ),
           Container(
-            color: Colors.lightBlue,
+            color: Colors.tealAccent,
             margin: const EdgeInsets.all(10.0),
             padding: const EdgeInsets.all(3.0),
             child: ElevatedButton(

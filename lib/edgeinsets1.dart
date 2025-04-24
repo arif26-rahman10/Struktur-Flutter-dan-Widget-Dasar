@@ -1,39 +1,50 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MaterialApp(
+    home: EdgeInsetsOnlyApp(),
+    debugShowCheckedModeBanner: false,
+  ));
+}
 
-class MyApp extends StatelessWidget {
+class EdgeInsetsOnlyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Jarak Komponen',
+      title: 'EdgeInsets.only App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home(),
+      home: const Home(),
     );
   }
 }
 
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Metode EdgeInsets.only'),
-        backgroundColor: Colors.blue, // Pastikan warna AppBar biru
+        title: const Text('Metode EdgeInsets.only'),
       ),
       body: Row(
         children: <Widget>[
           Expanded(
             child: Container(
-              color: Colors.lightBlue,
-              margin: const EdgeInsets.only(top: 50.0, left: 70.0, right: 10.0),
-              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              color: Colors.tealAccent,
+              margin: const EdgeInsets.only(
+                top: 50.0,
+              ),
+              padding: const EdgeInsets.only(
+                left: 70.0,
+                right: 10.0,
+              ),
               child: ElevatedButton(
-                child: Text('Button'),
                 onPressed: () {},
+                child: const Text('Button'),
               ),
             ),
           ),
